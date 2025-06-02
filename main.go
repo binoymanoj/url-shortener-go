@@ -26,8 +26,8 @@ func main() {
 	})
 
 	r.GET("/", controllers.HomeController)
-	r.POST("/shrtnurl")
-	r.GET("/:shortcode")
+	r.POST("/shrtnurl", controllers.UrlController)
+	r.GET("/:shortcode", controllers.RedirectionController)
 
 	port := os.Getenv("PORT")
 
